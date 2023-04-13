@@ -22,6 +22,7 @@ module.exports = (env, argv) => {
     return {
         entry: {
             index: './src/index.js',
+            styles: './src/styles.js'
         },
         output: {
             filename: '[name].[contenthash].js',
@@ -52,7 +53,7 @@ module.exports = (env, argv) => {
         plugins: [
             new htmlWebpackPlugin({
                 template: './src/index.html',
-                chunks: ['index']
+                chunks: ['index', 'styles']
             }),
 
             ...(isProduction ? [new MiniCssExtractPlugin({ filename: 'assets/css/[name].[contenthash].css' })] : [])
