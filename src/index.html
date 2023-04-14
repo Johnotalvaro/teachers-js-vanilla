@@ -9,9 +9,8 @@
 </head>
 
 <body>
-
-    <header class="bg-dark my-3">
-        <h1 class="text-center text-light"> Profesores </h1>
+    <header class="my-3">
+        <h1 class="text-center"> Profesores </h1>
     </header>
 
     <main class="container">
@@ -20,83 +19,89 @@
             <article class="col-xs-12 col-md-6">
                 Imagen
             </article>
-
             <article class="col-xs-12 col-md-6">
                 Formulario
             </article>
         </section>
+        <section class="row">
 
-        <section class="row text-center">
             <div class="col-12">
-                <table class="table table-hover">
-                    <caption>
-                        Registros de los Profesores
-                    </caption>
 
-                    <thead>
+                <div class="table-responsive">
 
-                        <tr>
-                            <th scope="col">
-                                Id de profesor
-                            </th>
-                            <th scope="col">
-                                Nombre
-                            </th>
-                            <th scope="col">
-                                Descripcion
-                            </th>
-                            <th scope="col">
-                                Correo
-                            </th>
-                            <th scope="col">
-                                Fecha nacimiento
-                            </th>
-                            <th scope="col">
-                                Opciones
-                            </th>
-                        </tr>
+                    <table class="table table-hover table-bordered">
 
-                    </thead>
+                        <caption>
+                            Registros de los profesores
+                        </caption>
 
-                    <tbody>
+                        <thead>
 
-                        <tr>
-                            <td>
-                                000001
-                            </td>
-                            <td>
-                                Jhon Otalvaro
-                            </td>
-                            <td>
-                                Recibe clases de frontend en la upb
-                            </td>
-                            <td>
-                                y@g.com
-                            </td>
-                            <td>
-                                07/20/2001
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-primary">
-                                    <em class="fa fa-pencil"></em> Editar
-                                </button>
-                                
-                                <button type="button" class="btn btn-danger">
-                                    <em class="fa fa-trash"></em> Eliminar
-                                </button>
-                            </td>
-                        </tr>
+                            <tr class="table-dark text-center">
+                                <th scope="col">
+                                    Id de profesor
+                                </th>
+                                <th scope="col">
+                                    Nombre
+                                </th>
+                                <th scope="col">
+                                    Descripción
+                                </th>
+                                <th scope="col">
+                                    Correo
+                                </th>
+                                <th scope="col">
+                                    Fecha nacimiento
+                                </th>
+                                <th scope="col">
+                                    Opciones
+                                </th>
+                            </tr>
 
-                    </tbody>
+                        </thead>
 
-                </table>
+                        <tbody>
+
+                            <tr class="align-middle">
+                                <td class="text-center">
+                                    000001
+                                </td>
+                                <td>
+                                    Jhon Otalvaro
+                                </td>
+                                <td>
+                                    Recibe clases de frontend en la upb
+                                </td>
+                                <td>
+                                    y@g.com
+                                </td>
+                                <td>
+                                    07/20/2001
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" title="Editar">
+                                        <em class="fa fa-pencil"></em>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" title="Eliminar">
+                                        <em class="fa fa-trash"></em>
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
             </div>
+
         </section>
 
     </main>
 
     <footer>
-        Derechos reservados por Jhon <em class="fa-regular fa-registered"></em>
+        Derechos reservados por Jhon <em class="fa-regular fa-copyright"></em>
     </footer>
 
 </body>
