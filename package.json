@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JuanLopera0726/teachers-js-vanilla.git"
+    "url": "git+https://github.com/Johnotalvaro/teachers-js-vanilla.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JuanLopera0726/teachers-js-vanilla/issues"
+    "url": "https://github.com/Johnotalvaro/teachers-js-vanilla/issues"
   },
-  "homepage": "https://github.com/JuanLopera0726/teachers-js-vanilla#readme",
+  "homepage": "https://github.com/Johnotalvaro/teachers-js-vanilla#readme",
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
