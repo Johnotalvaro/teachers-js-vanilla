@@ -1,5 +1,5 @@
 // Encargado de orquestar todas las funciones de los demás archivos
-import { listeners, listTeachers } from './operations';
+import { listeners, } from './operations';
 
 export function initializeApp() {
     listeners();

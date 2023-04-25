@@ -13,11 +13,75 @@ export const formElements = {
     }
 };
 
+/**
+ * Array de objectos que contiene información para las validaciones
+ * Cada objeto contiene una referencia a cada campo, un Array de objetos
+ * de validaciones que tendrá, el ID del error, el mensaje y la función de validación
+ */
+export const fieldConfigurations = [
+    {
+        input: formElements.fields.name,
+        validations: [
+            {
+                errorId: `${formElements.fields.name.id}Required `,
+                errorMessage: 'El nombre es obligatorio.',
+                // Las validaciones retornaran un False cuando deben mostrar el mensaje de error
+                // y un False cuando no debe mostrarlo
+                validationFunction: (value) => {
+                    return value.trim() !== '';
+                }
+            }
+        ]
+    },
+    {
+        input: formElements.fields.description,
+        validations: [
+            {
+                errorId: `${formElements.fields.description.id}Required `,
+                errorMessage: 'La descripción es obligatoria',
+                // Las validaciones retornaran un False cuando deben mostrar el mensaje de error
+                // y un False cuando no debe mostrarlo
+                validationFunction: (value) => {
+                    return value.trim() !== '';
+                }
+            }
+        ]
+    },
+    {
+        input: formElements.fields.email,
+        validations: [
+            {
+                errorId: `${formElements.fields.email.id}Required `,
+                errorMessage: 'El email es obligatorio.',
+                // Las validaciones retornaran un False cuando deben mostrar el mensaje de error
+                // y un False cuando no debe mostrarlo
+                validationFunction: (value) => {
+                    return value.trim() !== '';
+                }
+            }
+        ]
+    },
+    {
+        input: formElements.fields.birthDate,
+        validations: [
+            {
+                errorId: `${formElements.fields.birthDate.id}Required `,
+                errorMessage: 'La fecha de nacimiento es obligatoria.',
+                // Las validaciones retornaran un False cuando deben mostrar el mensaje de error
+                // y un False cuando no debe mostrarlo
+                validationFunction: (value) => {
+                    return value.trim() !== '';
+                }
+            }
+        ]
+    }
+];
+
 export function getFormData() {
     /**
      * const formData = new FormData(formElements.form);
      * return Object.fromEntries(formData.entries());
-     */ 
+     */
     const teacher = {
         id: new Date().getTime(),
         name: formElements.fields.name.value,
