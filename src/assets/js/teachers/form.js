@@ -52,7 +52,7 @@ export const fieldConfigurations = [
         validations: [
             {
                 errorId: `${formElements.fields.email.id}Required `,
-                errorMessage: 'El email es obligatorio.',
+                errorMessage: 'El correo electrónico obligatorio.',
                 // Las validaciones retornaran un False cuando deben mostrar el mensaje de error
                 // y un False cuando no debe mostrarlo
                 validationFunction: (value) => {
