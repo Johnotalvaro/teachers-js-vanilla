@@ -8,6 +8,11 @@ export function createEmptyRow(colspan, message) {
     return rowEmpty;
 }
 
+export function createTableCol(className, textContent) {
+    const tableData = document.createElement(className);
+    tableData.textContent = textContent;
+    return tableData
+}
 
 export function createActionButton({ buttonClass, buttonClassIdentifier, title, icon, dataId }) {
     const actionButton = document.createElement('button');
@@ -16,6 +21,7 @@ export function createActionButton({ buttonClass, buttonClassIdentifier, title, 
     actionButton.setAttribute('title', title);
     const actionIcon = document.createElement('em');
     actionIcon.classList.add('fa', icon);
+    actionIcon.dataset.id = dataId;
     actionButton.appendChild(actionIcon);
     return actionButton;
 }
