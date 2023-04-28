@@ -1,7 +1,5 @@
 // Encargado de todas las operaciones que se hagan en el formulario (interacción y configuración)
 
-import { Button } from "bootstrap";
-
 /**
  * Este objeto contiene las referencias a los elementos clave del formulario
  */
@@ -98,7 +96,7 @@ export function getFormData() {
      * return Object.fromEntries(formData.entries());
      */
     const teacher = {
-        id: new Date().getTime(),
+        id: formElements.fields.id.value.trim() ? parseInt(formElements.fields.id.value.trim() ): new Date().getTime(),
         name: formElements.fields.name.value,
         description: formElements.fields.description.value,
         email: formElements.fields.email.value,
