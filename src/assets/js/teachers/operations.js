@@ -127,7 +127,7 @@ function listenTableClickEvent() {
 
         const idTeacher = target.getAttribute('data-id');
 
-        if (target.classList.contains('btn-edit') || target.classList.contains('fa-edit')) {
+        if (target.classList.contains('btn-edit') || target.classList.contains('fa-pencil')) {
 
             editTeacher(idTeacher);
 

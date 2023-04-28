@@ -1,15 +1,23 @@
 // Encargado de todas las operaciones que se hagan en el formulario (interacción y configuración)
 
+import { Button } from "bootstrap";
+
 /**
  * Este objeto contiene las referencias a los elementos clave del formulario
  */
 export const formElements = {
     form: document.getElementById('teacherForm'),
+    containerId: document.getElementById('containerId'),
     fields: {
+        id: document.getElementById('txtId'),
         name: document.getElementById('txtName'),
         description: document.getElementById('txtDescription'),
         email: document.getElementById('txtEmail'),
         birthDate: document.getElementById('txtBirthDate'),
+    },
+    buttons: {
+        btnSubmit: document.getElementById('btnSubmit'),
+        btnCancel: document.getElementById('btnCancel'),
     }
 };
 
@@ -101,13 +109,27 @@ export function getFormData() {
 
 export function resetForm() {
     formElements.form.reset();
+    hideIdAndChangeElementForNew();
 }
-
 
 export function setFormData(teacher) {
     const { id, name, description, email, birthDate } = teacher;
-    formElements.fields.name.value = name
-    formElements.fields.description.value = description
-    formElements.fields.email.value = email
-    formElements.fields.birthDate.value = birthDate
+    formElements.fields.id.value = id;
+    formElements.fields.name.value = name;
+    formElements.fields.description.value = description;
+    formElements.fields.email.value = email;
+    formElements.fields.birthDate.value = birthDate;
+    showIdAndChangeElementForEdit();
+}
+
+function showIdAndChangeElementForEdit() {
+    formElements.containerId.classList.replace('d-none', 'd-block');
+    formElements.buttons.btnSubmit.classList.replace('btn-success', 'btn-primary');
+    formElements.buttons.btnSubmit.textContent = "Guardar";
+}
+
+function hideIdAndChangeElementForNew() {
+    formElements.containerId.classList.replace('d-block', 'd-none');
+    formElements.buttons.btnSubmit.classList.replace('btn-primary', 'btn-success');
+    formElements.buttons.btnSubmit.textContent = "Enviar";
 }
